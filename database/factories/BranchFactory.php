@@ -14,7 +14,7 @@ class BranchFactory extends Factory
     {
         return [
             'code' => strtoupper(fake()->unique()->lexify('BR???')),
-            'name' => 'فرع ' . fake()->city(),
+            'name' => 'فرع '.fake()->city(),
             'city' => fake()->city(),
             'is_active' => true,
         ];

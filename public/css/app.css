@@ -155,10 +155,15 @@ img{max-width:100%}
 .repeat-row--criteria{grid-template-columns:minmax(0,1.4fr) minmax(110px,1fr) minmax(0,1.2fr) minmax(80px,.6fr) auto}
 .repeat-row--cert{grid-template-columns:minmax(0,1.8fr) minmax(0,1.4fr) minmax(110px,.8fr) minmax(110px,.8fr) auto}
 .repeat-row--exp{grid-template-columns:minmax(0,1.5fr) minmax(0,1.2fr) minmax(110px,.8fr) minmax(110px,.8fr) auto}
+.repeat-row--hall-equipment{grid-template-columns:minmax(0,2fr) minmax(120px,.8fr) auto}
+.repeat-row--session-day{grid-template-columns:70px minmax(140px,1fr) 105px 105px minmax(180px,1.4fr) minmax(150px,1.1fr) auto}
+.repeat-row--session-trainer{grid-template-columns:minmax(0,2fr) minmax(150px,.8fr) auto}
+.repeat-row--trainee-provider{grid-template-columns:minmax(0,1.8fr) minmax(0,1.2fr) minmax(120px,.8fr) minmax(120px,.8fr) minmax(140px,.8fr) auto}
 .repeat-row .full{grid-column:1/-1}
+@media (max-width:1200px){.repeat-row--session-day{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:1024px){.filter-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:900px){.repeat-row--module,.repeat-row--criteria,.repeat-row--cert,.repeat-row--exp{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.filter-grid,.details,.repeat-row--module,.repeat-row--criteria,.repeat-row--cert,.repeat-row--exp{grid-template-columns:1fr}}
+@media (max-width:900px){.repeat-row--module,.repeat-row--criteria,.repeat-row--cert,.repeat-row--exp,.repeat-row--hall-equipment,.repeat-row--session-day,.repeat-row--session-trainer,.repeat-row--trainee-provider{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.filter-grid,.details,.repeat-row--module,.repeat-row--criteria,.repeat-row--cert,.repeat-row--exp,.repeat-row--hall-equipment,.repeat-row--session-day,.repeat-row--session-trainer,.repeat-row--trainee-provider{grid-template-columns:1fr}}
 
 /* ---------- tabs ---------- */
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-block-end:18px;border-block-end:1px solid var(--line);padding-block-end:10px}

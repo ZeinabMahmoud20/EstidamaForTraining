@@ -57,6 +57,7 @@ class TrainingProviderController extends Controller
             'courseSessions' => fn ($query) => $query->orderByDesc('start_date'),
             'courseSessions.course',
         ])->loadCount(['traineeProviders', 'nominations', 'invoices']);
+
         return view('providers.show', compact('provider'));
     }
 

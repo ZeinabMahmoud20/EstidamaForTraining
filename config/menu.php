@@ -24,11 +24,11 @@ return [
         ]],
         ['title' => 'البرامج التدريبية', 'items' => [
             ['label' => 'الدورات', 'icon' => 'fa-book-open', 'route' => 'courses.index', 'can' => ['COURSES_VIEW', 'COURSES_MANAGE']],
-            ['label' => 'الجلسات المجدولة', 'icon' => 'fa-calendar-days', 'route' => 'sessions.index', 'can' => ['SESSIONS_MANAGE']],
+            ['label' => 'الجلسات المجدولة', 'icon' => 'fa-calendar-days', 'route' => 'sessions.index', 'can' => ['SESSIONS_MANAGE', 'SESSIONS_PUBLISH', 'CHANGE_HALL']],
             ['label' => 'التصنيفات والأنواع', 'icon' => 'fa-tags', 'route' => 'lookups.index', 'can' => ['LOOKUPS_MANAGE']],
         ]],
         ['title' => 'المتدربون', 'items' => [
-            ['label' => 'المتدربون', 'icon' => 'fa-users', 'route' => 'trainees.index', 'can' => ['TRAINEES_MANAGE']],
+            ['label' => 'المتدربون', 'icon' => 'fa-users', 'route' => 'trainees.index', 'can' => ['TRAINEES_MANAGE', 'WARNINGS_MANAGE']],
             ['label' => 'الترشيحات', 'icon' => 'fa-user-check', 'route' => 'nominations.index', 'can' => ['REVIEW_NOMINATION', 'NOMINATE_TRAINEE']],
             ['label' => 'التسجيلات', 'icon' => 'fa-clipboard-list', 'route' => 'enrollments.index', 'can' => ['ENROLLMENTS_MANAGE']],
         ]],
@@ -38,10 +38,11 @@ return [
             ['label' => 'القاعات', 'icon' => 'fa-door-open', 'route' => 'halls.index', 'can' => ['HALLS_MANAGE', 'CHANGE_HALL']],
         ]],
         ['title' => 'التنفيذ والمتابعة', 'items' => [
-            ['label' => 'الحضور', 'icon' => 'fa-user-clock', 'route' => 'attendance.index', 'can' => ['ATTENDANCE_RECORD']],
+            ['label' => 'الحضور', 'icon' => 'fa-user-clock', 'route' => 'attendance.index', 'can' => ['ATTENDANCE_RECORD', 'ATTENDANCE_EXCUSE_REVIEW']],
             ['label' => 'الاختبارات', 'icon' => 'fa-file-pen', 'route' => 'exams.index', 'can' => ['EXAMS_MANAGE', 'EXAMS_GRADE']],
             ['label' => 'التقييمات', 'icon' => 'fa-star-half-stroke', 'route' => 'evaluations.index', 'can' => ['EVALUATION_FORMS_MANAGE', 'EVALUATION_REPORTS_VIEW']],
             ['label' => 'الشهادات', 'icon' => 'fa-certificate', 'route' => 'certificates.index', 'can' => ['CERTIFICATES_VIEW', 'ISSUE_CERTIFICATE']],
+            ['label' => 'شهاداتي', 'icon' => 'fa-award', 'route' => 'certificates.own', 'can' => ['CERTIFICATES_VIEW_OWN']],
         ]],
         ['title' => 'المالية', 'items' => [
             ['label' => 'الفواتير والمدفوعات', 'icon' => 'fa-file-invoice-dollar', 'route' => 'invoices.index', 'can' => ['INVOICES_MANAGE', 'PAYMENTS_MANAGE']],
